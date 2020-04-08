@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="address" class="com.lingtao.pojo.Address">
+        <property name="address" value="山东青岛"/>
+    </bean>
+    <bean id="student" class="com.lingtao.pojo.Student">
+        <property name="name" value="聆涛"/>
+        <property name="address" ref="address"/>
+        <property name="card">
+            <map>
+                <entry key="图书卡" value="11310033"/>
+                <entry key="饭卡" value="11310033"/>
+            </map>
+        </property>
+        <property name="books">
+            <array>
+                <value>红楼梦</value>
+                <value>西游记</value>
+                <value>水浒传</value>
+                <value>三国演义</value>
+            </array>
+        </property>
+        <property name="hobbys">
+            <list>
+                <value>唱</value>
+                <value>跳</value>
+                <value>rap</value>
+                <value>打篮球</value>
+            </list>
+        </property>
+        <property name="games">
+            <set>
+                <value>魔兽世界</value>
+                <value>英雄联盟</value>
+                <value>英雄联盟</value>
+            </set>
+        </property>
+        <property name="info">
+            <props>
+                <prop key="name">聆涛</prop>
+                <prop key="age">24</prop>
+                <prop key="sex">male</prop>
+            </props>
+        </property>
+        <property name="wife" value="null"/>
+        </bean>
+
+
+
+</beans>
