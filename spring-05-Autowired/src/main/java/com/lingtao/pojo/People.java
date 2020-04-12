@@ -1,10 +1,14 @@
 package com.lingtao.pojo;
 
+import org.springframework.beans.factory.annotation.Autowired;
+
 /**
  * Created by lingtao on 2020/4/8 22:37
  **/
 public class People {
+    @Autowired
     private Cat cat;
+    @Autowired
     private Dog dog;
     private String name;
 
