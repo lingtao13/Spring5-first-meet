@@ -11,7 +11,10 @@
     <modules>
         <module>spring-03-ioc2</module>
         <module>spring-04-di</module>
-        <module>spring-02-hellospirng</module>
+        <module>spring-02-hellospirng</module> 
+        <module>spring-05-Autowired</module>
+        <module>spring-08-proxy</module>
+        <module>spring-09-aop</module>
     </modules>
 
     <properties>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        https://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/aop
+        https://www.springframework.org/schema/aop/spring-aop.xsd">
+    <!--使用Spring来创建对象,在Spring中这些都称为Bean-->
+    <bean id="userService" class="com.lingtao.service.UserServiceImpl"/>
+    <bean id="log" class="com.lingtao.log.Log"/>
+    <bean id="afterlog" class="com.lingtao.log.AfterLog"/>
+
+    <bean id="annotationPointCut" class="com.lingtao.diy.AnnotationPointCut"/>
+    <aop:aspectj-autoproxy/>
+
+<!--&lt;!&ndash;    配置aop&ndash;&gt;-->
+<!--    <aop:config>-->
+<!--        &lt;!&ndash;切入点&ndash;&gt;-->
+<!--        <aop:pointcut id="pointcut" expression="execution(* com.lingtao.service.UserServiceImpl.*(..))"/>-->
+
+<!--&lt;!&ndash;        执行环绕增加&ndash;&gt;-->
+<!--        <aop:advisor advice-ref="log" pointcut-ref="pointcut"/>-->
+<!--        <aop:advisor advice-ref="afterlog" pointcut-ref="pointcut"/>-->
+<!--    </aop:config>-->
+
+<!--    <bean id="diy" class="com.lingtao.diy.DiyPointCut"/>-->
+
+<!--    <aop:config>-->
+<!--        <aop:aspect ref="diy">-->
+<!--&lt;!&ndash;            切入点&ndash;&gt;-->
+<!--            <aop:pointcut id="point" expression="execution(* com.lingtao.service.*.*(..))"/>-->
+<!--            <aop:before method="before" pointcut-ref="point"/>-->
+<!--            <aop:after method="after" pointcut-ref="point"/>-->
+<!--        </aop:aspect>-->
+<!--    </aop:config>-->
+
+</beans>
